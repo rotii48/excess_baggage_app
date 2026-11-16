@@ -482,23 +482,41 @@ static const String _githubUrl = 'https://github.com/rotii48/excess_baggage_app.
 
           const SizedBox(height: 16.0),
           //2.Author Information
+          // 2. Author Information (Name, Matric No, Course, Email)
           Card(
             elevation: 2,
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 children: [
-
-
                   const Text(
                     'Nurin Irdina',
-                    style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color:Color.fromRGBO(255, 178, 197, 1)),
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromRGBO(255, 178, 197, 1),
+                    ),
                   ),
                   const Divider(),
-                 _buildInfoRow(Icons.person, 'Name', 'Nurin Irdina Binti Mohamad Farizal'),
-                 _buildInfoRow(Icons.badge, 'Matric No', '2024234118'),
-                 _buildInfoRow(Icons.email, 'Email', 'nurinirdinaaa27@gmail.com'),
-
+                  _buildInfoRow(
+                    Icons.person,
+                    'Name',
+                    'Nurin Irdina Binti Mohamad Farizal',
+                  ),
+                  const SizedBox(height: 6.0),
+                  _buildInfoRow(Icons.badge, 'Matric No', '2024234118'),
+                  const SizedBox(height: 6.0),
+                  _buildInfoRow(
+                    Icons.school,
+                    'Course',
+                    'CS251 5A',
+                  ),
+                  const SizedBox(height: 6.0),
+                  _buildInfoRow(
+                    Icons.email,
+                    'Email',
+                    'nurinirdinaaa27@gmail.com',
+                  ),
                 ],
               ),
             ),
