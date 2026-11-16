@@ -194,7 +194,7 @@ class _HomePageState extends State<HomePage> {
               const Divider(),
               _buildResultRow(
                 'Free allowance :',
-                _freeAllow.toStringAsFixed(2),
+                '${_freeAllow.toStringAsFixed(2)} kg',
               ),
 
               const Divider(),
@@ -206,8 +206,9 @@ class _HomePageState extends State<HomePage> {
               const Divider(),
               _buildResultRow(
                 'Excess Baggage Charge:',
-                _excessCharge.toStringAsFixed(2),
+                'RM ${_excessCharge.toStringAsFixed(2)}',
               ),
+              
               const Divider(),
               _buildResultRow(
                 'Total Payable\n(incl. 8% service tax):',
