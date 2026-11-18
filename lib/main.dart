@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+//flutter launches the root application widget 
 void main() {
   runApp(const ExcessBaggageApp());
 }
 
+// MaterialApp sets app title, global theme and initial screen 
 class ExcessBaggageApp extends StatelessWidget {
   const ExcessBaggageApp({super.key});
 
@@ -15,7 +17,7 @@ class ExcessBaggageApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //tema
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(255, 178, 197, 1)),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(255, 178, 197, 1)),//Economy (Max 20kg button)
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           backgroundColor: Color.fromRGBO(255, 178, 197, 1),
@@ -28,7 +30,7 @@ class ExcessBaggageApp extends StatelessWidget {
   }
 }
 
-// MainScreen widget
+// MainScreen shows the Appbar, selected page and navigation
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -52,9 +54,9 @@ class MainScreen extends StatefulWidget {
           title:const Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.luggage),
-              SizedBox(width: 8),
-              Text('Baggage Fee Estimator'),
+              Icon(Icons.luggage),//icon on the appBar 
+              SizedBox(width: 8), 
+              Text('Baggage Fee Estimator'), // text on the appBar 
 
             ],
             ),
@@ -74,11 +76,11 @@ class MainScreen extends StatefulWidget {
   
           items: [
             const BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.home),//icon home at the menu down navigation
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.info),
+              icon: Icon(Icons.info),//icon info at the menu down navigation
               label: 'About',
             ),
           ],
@@ -177,11 +179,11 @@ class _HomePageState extends State<HomePage> {
           ),
           title: const Row(
             children: [
-              Icon(Icons.luggage, color: Colors.pinkAccent),
+              Icon(Icons.luggage, color: Colors.pinkAccent),// receipt icon
               SizedBox(width: 8),
               Expanded(
                 child: Text(
-                  'Baggage Fee Summary',
+                  'Baggage Fee Summary',//receipt title
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -235,9 +237,9 @@ class _HomePageState extends State<HomePage> {
         return AlertDialog(
           title: const Row(
             children: [
-              Icon(Icons.error_outlined, color: Colors.red),
+              Icon(Icons.error_outlined, color: Colors.red), // icon allert (pop-out notifications)
               SizedBox(width: 8),
-              Text('Input Error'),
+              Text('Input Error'), // title (pop -out notifications) 
             ],
           ),
           content: Text(message),
@@ -319,7 +321,7 @@ class _HomePageState extends State<HomePage> {
               decoration: const InputDecoration(
                 labelText: 'Checked Baggage Weight (kg)',
                 hintText: 'e.g. 25',
-                prefixIcon: Icon(Icons.luggage),
+                prefixIcon: Icon(Icons.luggage),//textbox checked baggage weight 
                 border: OutlineInputBorder(),
               ),
             ),
@@ -372,7 +374,7 @@ class _HomePageState extends State<HomePage> {
              
               Row(      
                 children: [
-                  Icon(Icons.info_outline, color: Colors.grey[700]),
+                  Icon(Icons.info_outline, color: Colors.grey[700]), //icon color on the helpful notice
                   const SizedBox(width: 6),
                   const Expanded(
                     child: Text(
@@ -391,11 +393,11 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: ElevatedButton.icon(
                     onPressed: _calculateFee,
-                    icon: const Icon(Icons.calculate),
+                    icon: const Icon(Icons.calculate),//icons calculate
                     label: const Text('CALCULATE'),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(255, 178, 197, 1), 
-                      foregroundColor: Colors.white, 
+                      backgroundColor: Color.fromRGBO(255, 178, 197, 1), //colors button calculate  
+                      foregroundColor: Colors.white, //font colors button calculate
                       padding: EdgeInsets.symmetric(vertical: 14),
 
                     ), // Calculate button color
@@ -491,7 +493,7 @@ static const String _githubUrl = 'https://github.com/rotii48/excess_baggage_app.
               child: Column(
                 children: [
                   const Text(
-                    'Nurin Irdina',
+                    'Author Information',
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
